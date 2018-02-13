@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Homepage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script text="type/javascript" src="script.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/todo.css">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="/">My Homepage</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">Home</a></li>
+        <li><a href="cal.html">Calendar</a></li>
+        <!-- <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li> -->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="todolist not-done">
+             <h1>Todo List</h1>
+                <input type="text" class="form-control add-todo" placeholder="Add todo">
+                    <hr>
+                    <ul id="sortable" class="list-unstyled">
+                    <li class="ui-state-default">
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" />Add API to site</label>
+                        </div>
+                    </li>
+                    <li class="ui-state-default">
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" />Upload to GitHub, add URL at bottom</label>
+                        </div>
+                    </li>
+                    <li class="ui-state-default">
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" />Think of API to use</label>
+                        </div>
+                    </li>
+                </ul>
+                <div class="todo-footer">
+                    <strong><span class="count-todos"></span></strong> Items Left: 3
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="todolist">
+             <h1>Completed</h1>
+                <ul id="done-items" class="list-unstyled">
+                    <li>Item1<button class="remove-item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-remove"></span></button></li>
+                    <li>Item2<button class="remove-item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-remove"></span></button></li>
+                    <li>Item3<button class="remove-item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-remove"></span></button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+  <footer class="container-fluid text-center">
+    <a href="https://github.com/BYU-CS260-Winter-2018/lab-2-ALMerrill">Github</a>
+  </footer>
+
+</body>
+</html>
