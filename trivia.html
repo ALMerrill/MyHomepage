@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Trivia</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/todo.css">
+  <script text="type/javascript" src="js/script.js"></script>
+</head>
+<body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="index.html">My Homepage</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cal.html">Calendar</a></li>
+          <li class="active"><a href="trivia.html">Trivia</a></li>
+          <!-- <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li> -->
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+  <main class="container-fluid text-center">
+    <h1>Get trivia questions</h1>
+    <button id="triviaSubmit" type="submit" class="btn btn-primary">Get Trivia</button>
+    <button id="show_answers" type="submit" class="btn btn-primary" disabled>Show Answers</button>
+    <div id="answer_block" class="col-sm-12 text-center"></div>
+    <div id="triviaResults" class="col-sm-12 text-left"></div>
+  </main>
+
+
+
+  <footer class="container-fluid text-center">
+    <a href="https://github.com/ALMerrill/MyHomepage">Github</a>
+  </footer>
+
+</body>
+</html>
