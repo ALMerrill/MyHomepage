@@ -7,7 +7,46 @@ $(document).ready(function() {
 	        a[i] = a[j];
 	        a[j] = x;
 	    }
-	}
+	};
+
+	var todoApp = new Vue({
+		el: "#todoApp",
+		data: {
+			todos: [],
+			numTodos: 0,
+			toAdd: '',
+			completed: [],
+		},
+		methods: {
+			addTodo: function() {
+				this.numTodos++;
+				this.todos.push({text: this.toAdd});
+			},
+			removeCompleted: function(index) {
+				this.completed.splice(index, 1);
+			},
+			dragItem: function(item) {
+		      this.drag = item;
+		    },
+		    dropItem: function(item) {
+		      var indexItem = this.todos.indexOf(this.drag);
+		      var indexTarget = this.todos.indexOf(item);
+		      this.todos.splice(indexItem,1);
+		      this.todos.splice(indexTarget,0,this.drag);
+		    },
+		    completeTodo: function(item) {
+		    	var index = this.todos.indexOf(item);
+		    	if (index > -1)
+		    		this.todos.splice(index,1);
+		    	this.completed.push(item);
+		    },
+		    deleteTodo: function(item) {
+		    	var index = this.todos.indexOf(item);
+      			if (index > -1)
+        			this.todos.splice(index,1);
+		    }
+		},
+	});
 
 	var submitButton = $("#triviaSubmit");
 	var answers = ["No trivia yet","No trivia yet","No trivia yet","No trivia yet","No trivia yet","No trivia yet","No trivia yet","No trivia yet","No trivia yet","No trivia yet"];
@@ -59,5 +98,12 @@ $(document).ready(function() {
 		}
 		answers_html += "</p>";
 		$('#answer_block').html(answers_html);
-	})
+	});
 });
+
+
+
+
+
+
+

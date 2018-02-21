@@ -37,6 +37,15 @@ li.ui-state-default:last-child{
 #done-items li:last-child{
     border-bottom:none;
 }
+
+.delete {
+  display: none;
+  margin-left: auto;
+}
+
+li:hover .delete {
+    display: block;
+}
 /*#checkAll{
     margin-top:10px;
 }*/
