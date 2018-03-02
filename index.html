@@ -30,8 +30,6 @@
         <li class="active"><a href="#">Home</a></li>
         <li><a href="cal.html">Calendar</a></li>
         <li><a href="trivia.html">Trivia</a></li>
-        <!-- <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li> -->
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -52,11 +50,6 @@
                 </form>
                   <hr>
                   <ul id="sortable" class="list-unstyled">
-                    <!-- <li class="ui-state-default" v-for="todo in todos">
-                      <div class="checkbox">
-                        <label><input type="checkbox" value="" />{{ todo.text }}</label>
-                      </div>
-                    </li> -->
                     <li v-for="item in todos" draggable="true" v-on:dragstart="dragItem(item)" v-on:dragover.prevent v-on:drop="dropItem(item)">
                       <input type="checkbox" v-on:click="completeTodo(item)"><label>{{ item.text }}</label><button v-on:click="deleteTodo(item)" class="delete">X</button>
                     </li>

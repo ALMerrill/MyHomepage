@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Trivia</title>
+  <title>League</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -10,8 +10,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/todo.css">
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script text="type/javascript" src="js/script.js"></script>
+  <script text="type/javascript" src="js/league.js"></script>
 </head>
 <body>
 
@@ -29,7 +29,9 @@
         <ul class="nav navbar-nav">
           <li><a href="index.html">Home</a></li>
           <li><a href="cal.html">Calendar</a></li>
-          <li class="active"><a href="trivia.html">Trivia</a></li>
+          <li class="active"><a href="League.html">League</a></li>
+          <!-- <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li> -->
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -38,30 +40,13 @@
     </div>
   </nav>
   
-  <main class="container-fluid text-center">
-    <div id="app">
-      <div v-if="loading"></div>
-      <div v-else>
-        <h1>Get trivia question</h1>
-        <button v-on:click="getTrivia" id="triviaSubmit" type="submit" class="btn btn-primary">Get Question</button>
-        <h4>{{current}}</h4>
-        <ul class="list-unstyled">
-          <li v-for="answer in answers">
-            <div v-if="answer === correct">
-              <button v-bind:disabled="colored" class="link" v-bind:class="{correct: colored}" v-on:click="checkAnswer(answer, $event)">{{answer}}</button>
-            </div>
-            <div v-else>
-              <button v-bind:disabled="colored" class="link" v-bind:class="{incorrect: colored}" v-on:click="checkAnswer(answer, $event)">{{answer}}</button>
-            </div>
-          </li>
-        </ul>
-        <p>Correct: {{numCorrect}}</p>
-        <p>Incorrect: {{numIncorrect}}</p>
-        <!-- <div id="answer_block" class="col-sm-12 text-center"></div>
-        <div id="triviaResults" class="col-sm-12 text-left"></div> -->
-      </div>
-    </div>
 
+  <main class="container-fluid text-center">
+    <h1>Get trivia questions</h1>
+    <button id="triviaSubmit" type="submit" class="btn btn-primary">Get Trivia</button>
+    <button id="show_answers" type="submit" class="btn btn-primary" disabled>Show Answers</button>
+    <div id="answer_block" class="col-sm-12 text-center"></div>
+    <div id="triviaResults" class="col-sm-12 text-left"></div>
   </main>
 
 

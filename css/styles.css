@@ -39,6 +39,23 @@ form {
 	width: 300px;
 }
 
+/*button.link { 
+  background:white;
+  border:none;
+}*/
+
+li {
+  margin: 10px 0;
+}
+
+button.correct {
+  background: green; 
+}
+
+button.incorrect {
+  background: red;
+}
+
 .center {
   position: absolute;
   left: 0;
